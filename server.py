@@ -115,7 +115,7 @@ def main():
 
     
     for i, row in enumerate(st.session_state.board):
-        cols = st.columns(3,gap='small')
+        cols = st.columns(5,gap='small')
         for j, field in enumerate(row):
             cols[j + 1].button(
                 field,
