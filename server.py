@@ -103,9 +103,6 @@ def main():
     new_title = '<p style="font-family:sans-serif; color:black; font-size: 28px;">Configuration ⚙️-:</p>'
     st.markdown(new_title, unsafe_allow_html=True)
 
-    reset, score, player = st.columns(3)
-    reset.button('Re-try it again!!', on_click=init, args=(True,))
-
 
     st.selectbox(
             'Select your opponet 💪',
@@ -114,6 +111,8 @@ def main():
             on_change=init,
             args=(True,),
         )
+    reset, score, player = st.columns(3)
+    reset.button('Re-try it again!!', on_click=init, args=(True,))
 
 # Store the initial value of widgets in session state
     new_title1 = '<p style="font-family:sans-serif; color:black; font-size: 28px;">Tic Tac Toe Begin 🤼-:</p>'
@@ -138,7 +137,7 @@ def main():
 
     score.button(f'🍕{st.session_state.win["🍕"]} 🆚 {st.session_state.win["🥑"]}🥑')
     player.button(
-        f'{"🍕" if st.session_state.player == "🍕" else "🥑"}\'s turn'
+        f 'Hi, its {"🍕" if st.session_state.player == "🍕" else "🥑"} turn, Best of Luck!!!'
         if not st.session_state.winner
         else f'Game is Over. See you soon 😀'
     )
