@@ -96,12 +96,9 @@ def main():
         # Lets Play Tic Tac Toe........🍕 VS 🥑
         """
     )
-    st.image('a.jpg', width=650)
 
     if "board" not in st.session_state:
         init()
-    new_title = '<p style="font-family:sans-serif; color:black; font-size: 28px;">Configuration ⚙️-:</p>'
-    st.markdown(new_title, unsafe_allow_html=True)
 
 
     st.selectbox(
@@ -115,13 +112,10 @@ def main():
     reset.button('Re-try it again!!', on_click=init, args=(True,))
 
 # Store the initial value of widgets in session state
-    new_title1 = '<p style="font-family:sans-serif; color:black; font-size: 28px;">Tic Tac Toe Begin 🤼-:</p>'
-    st.markdown(new_title1, unsafe_allow_html=True)
-
 
     
     for i, row in enumerate(st.session_state.board):
-        cols = st.columns(5,gap='medium')
+        cols = st.columns(3,gap='small')
         for j, field in enumerate(row):
             cols[j + 1].button(
                 field,
