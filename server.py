@@ -137,7 +137,7 @@ def main():
 
     score.button(f'🍕{st.session_state.win["🍕"]} 🆚 {st.session_state.win["🥑"]}🥑')
     player.button(
-        f'{"🍕" if st.session_state.player == "🍕" else "🥑"} turn, Best of Luck!!!'
+        f'Hi,its {"🍕" if st.session_state.player == "🍕" else "🥑"} turn, Best of Luck!!!'
         if not st.session_state.winner
         else f'Game is Over. See you soon 😀'
     )
